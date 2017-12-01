@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Final%20Project_15_year</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Final Project_15_year</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -19075,7 +19075,7 @@ Name: 201, dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Fifteen-years-high-stock-market-price-have-significant-relationship-with-license-application">Fifteen years high stock market price have significant relationship with license application<a class="anchor-link" href="#Fifteen-years-high-stock-market-price-have-significant-relationship-with-license-application">&#182;</a></h4><p>We see the p-value=0.008, and t-value=2.659, therefore we conlude there is significant relationship between Business license application and High stock price. As the stock market price goes up, the license application number goes up by 0.0016 high price. As this coefficient is very low, the relationship is not obvious when look at the plot</p>
+<h4 id="Fifteen-years-high-stock-market-price-have-significant-relationship-with-license-application">Fifteen years high stock market price have significant relationship with license application<a class="anchor-link" href="#Fifteen-years-high-stock-market-price-have-significant-relationship-with-license-application">&#182;</a></h4><p>We see the p-value=0.008, and t-value=2.659, therefore we conlude there is significant relationship between Business license application and High stock price. As the stock market price goes up, the license application number goes up by 0.0016 high price. As this coefficient is very low and there is an extreme outlier, the relationship is not obvious when look at the plot</p>
 <ul>
 <li>We also observed stock market high price have significant relationship with business license in the 5-year analysis.</li>
 <li>Therefore we conclude that in the 5-year data the stock market price also have significant relationship with license application</li>
@@ -19176,7 +19176,7 @@ Name: 201, dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Fifteen-years-Low-stock-market-price-have-significant-relationship-with-license-application">Fifteen years Low stock market price have significant relationship with license application<a class="anchor-link" href="#Fifteen-years-Low-stock-market-price-have-significant-relationship-with-license-application">&#182;</a></h4><p>We see the p-value=0.008, and t-value=2.654, therefore we conlude there is relationship between Business license application and High stock price. As the stock market price goes up, the license application number goes up by 0.0016 low price. Becuase this coefficient is very low, the relationship is not obvious when look at the chart</p>
+<h4 id="Fifteen-years-Low-stock-market-price-have-significant-relationship-with-license-application">Fifteen years Low stock market price have significant relationship with license application<a class="anchor-link" href="#Fifteen-years-Low-stock-market-price-have-significant-relationship-with-license-application">&#182;</a></h4><p>We see the p-value=0.008, and t-value=2.654, therefore we conlude there is relationship between Business license application and High stock price. As the stock market price goes up, the license application number goes up by 0.0016 low price. Becuase this coefficient is very low and the an outlier far away from the trendline, the relationship is not obvious when look at the chart</p>
 <ul>
 <li>We also observed stock market low price have significant relationship with business license in the 5-year analysis.</li>
 <li>Therefore we conclude that in the 5-year data the stock market price have significant relationship with license application</li>
@@ -28341,22 +28341,6 @@ height=216
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">html</span> <span class="o">=</span> <span class="s2">&quot;https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr&quot;</span>
-<span class="n">license</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Business_Licenses.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;APPLICATION CREATED DATE&quot;</span><span class="p">,</span> <span class="s2">&quot;BUSINESS ACTIVITY&quot;</span><span class="p">,</span> <span class="s2">&quot;APPLICATION TYPE&quot;</span><span class="p">,</span> <span class="s2">&quot;ADDRESS&quot;</span><span class="p">],</span><span class="n">low_memory</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-<span class="n">license</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">license</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 
