@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Final Project_15_year</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Final%20Project_15_year</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11788,7 +11788,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -11818,6 +11818,23 @@ div#notebook {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/minyue/anaconda/lib/python3.6/site-packages/statsmodels/compat/pandas.py:56: FutureWarning: The pandas.core.datetools module is deprecated and will be removed in a future version. Please use the pandas.tseries module instead.
+  from pandas.core import datetools
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -17279,7 +17296,7 @@ Name: Date, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">unemployment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;unemployment.csv&#39;</span><span class="p">)</span>
@@ -17376,8 +17393,8 @@ Name: Date, dtype: int64</pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Plot-of-umemployment-rate-of-ALL-years">Plot of umemployment rate of ALL years<a class="anchor-link" href="#Plot-of-umemployment-rate-of-ALL-years">&#182;</a></h3><ul>
-<li>Max unemployment rate: 12.6%, 9/1/2016</li>
-<li>Lowest unemployment rate: 4.5%, 1/1/1990</li>
+<li>Max unemployment rate: 12.6%, 1/1/2010</li>
+<li>Lowest unemployment rate: 4.5%, 10/1/2006</li>
 </ul>
 
 </div>
@@ -18581,11 +18598,10 @@ height=216
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">max</span> <span class="o">=</span> <span class="n">unemployment</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
 </pre></div>
 
 </div>
@@ -18597,14 +18613,16 @@ height=216
 
 
 <div class="output_area">
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[4]:</div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Date       9/1/2016
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Date       1/1/2010
 Chicago        12.6
-dtype: object
-</pre>
+Name: 240, dtype: object</pre>
 </div>
+
 </div>
 
 </div>
@@ -18613,11 +18631,10 @@ dtype: object
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">low</span> <span class="o">=</span> <span class="n">unemployment</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">low</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">unemployment</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()]</span>
 </pre></div>
 
 </div>
@@ -18629,14 +18646,16 @@ dtype: object
 
 
 <div class="output_area">
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[5]:</div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Date       1/1/1990
-Chicago         4.5
-dtype: object
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Date       10/1/2006
+Chicago          4.5
+Name: 201, dtype: object</pre>
 </div>
+
 </div>
 
 </div>
@@ -18650,8 +18669,8 @@ dtype: object
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Analyze-the-past-FIFTEEN-years-unemployment-rate">Analyze the past FIFTEEN years unemployment rate<a class="anchor-link" href="#Analyze-the-past-FIFTEEN-years-unemployment-rate">&#182;</a></h3><p>We see fifteen years and all year share the same unemployment rate but with different dates</p>
 <ul>
-<li>Max unemployment rate: 12.6%, 9/1/2016</li>
-<li>Lowest unemployment rate: 4.5%, 1/1/2003</li>
+<li>Max unemployment rate: 12.6%, 1/1/2010</li>
+<li>Lowest unemployment rate: 4.5%, 10/1/2006</li>
 </ul>
 
 </div>
@@ -18659,7 +18678,7 @@ dtype: object
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fifteenyear</span> <span class="o">=</span> <span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2017&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2016&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2015&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2014&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2013&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2012&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2011&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2010&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2009&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2008&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2007&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2006&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2005&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2004&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">unemployment</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;2003&#39;</span><span class="p">)</span>
@@ -18677,7 +18696,7 @@ dtype: object
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/jingjingzhang/anaconda/lib/python3.6/site-packages/pandas/core/computation/expressions.py:183: UserWarning: evaluating in Python space because the &#39;+&#39; operator is not supported by numexpr for the bool dtype, use &#39;|&#39; instead
+<pre>/Users/minyue/anaconda/lib/python3.6/site-packages/pandas/core/computation/expressions.py:183: UserWarning: evaluating in Python space because the &#39;+&#39; operator is not supported by numexpr for the bool dtype, use &#39;|&#39; instead
   unsupported[op_str]))
 </pre>
 </div>
@@ -18689,7 +18708,7 @@ dtype: object
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fifteen_year</span> <span class="o">=</span> <span class="n">unemployment</span><span class="p">[</span><span class="n">fifteenyear</span><span class="p">]</span>
@@ -18702,11 +18721,10 @@ dtype: object
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">max</span> <span class="o">=</span> <span class="n">fifteen_year</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fifteen_year</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">fifteen_year</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
 </pre></div>
 
 </div>
@@ -18718,14 +18736,16 @@ dtype: object
 
 
 <div class="output_area">
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[9]:</div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Date       9/1/2016
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Date       1/1/2010
 Chicago        12.6
-dtype: object
-</pre>
+Name: 240, dtype: object</pre>
 </div>
+
 </div>
 
 </div>
@@ -18734,11 +18754,10 @@ dtype: object
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">low</span> <span class="o">=</span> <span class="n">fifteen_year</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">low</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fifteen_year</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">fifteen_year</span><span class="p">[</span><span class="s1">&#39;Chicago&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()]</span>
 </pre></div>
 
 </div>
@@ -18750,14 +18769,16 @@ dtype: object
 
 
 <div class="output_area">
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[11]:</div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Date       1/1/2003
-Chicago         4.5
-dtype: object
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Date       10/1/2006
+Chicago          4.5
+Name: 201, dtype: object</pre>
 </div>
+
 </div>
 
 </div>
@@ -19040,10 +19061,10 @@ dtype: object
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="We-run-OLS-regression-on-the-merged-license-data-and-stock-market-data">We run OLS regression on the merged license data and stock market data<a class="anchor-link" href="#We-run-OLS-regression-on-the-merged-license-data-and-stock-market-data">&#182;</a></h3><h4 id="We-conclude-that-15-years-license-data-and-stock-market-data-have-no-significant-relationship">We conclude that 15 years license data and stock market data have no significant relationship<a class="anchor-link" href="#We-conclude-that-15-years-license-data-and-stock-market-data-have-no-significant-relationship">&#182;</a></h4><ul>
+<h3 id="We-run-OLS-regression-on-the-merged-license-data-and-stock-market-data">We run OLS regression on the merged license data and stock market data<a class="anchor-link" href="#We-run-OLS-regression-on-the-merged-license-data-and-stock-market-data">&#182;</a></h3><h4 id="We-conclude-that-15-years-license-data-and-stock-market-data-have-significant-relationship">We conclude that 15 years license data and stock market data have significant relationship<a class="anchor-link" href="#We-conclude-that-15-years-license-data-and-stock-market-data-have-significant-relationship">&#182;</a></h4><ul>
 <li>As p value 0.017 smaller than 0.05 we observe There is statistical significant relationship between these two data</li>
-<li>We also oberserved a ver small R-squared value: 0.002, which means there are very little variables are explained by this regression model</li>
-<li>When not hold other values fix, and only run regression with high price and number of application, we have a p-vale of 0.008 which indicates a significant relationship. Though R-squared value hold the same</li>
+<li>We also oberserved a very small R-squared value: 0.002, which means there are very little variables are explained by this regression model</li>
+<li>When we only run regression with high price and number of application, we have a p-vale of 0.008 which indicates a significant relationship. Though R-squared value hold the same</li>
 </ul>
 <h4 id="In-order-to-see-a-more-recent-trend,-we-did-another-analysis-over-the-past-5-years-later-again,-to-see-the-relationship-between-license-data-and-stock-market-data.">In order to see a more recent trend, we did another analysis over the past 5 years later again, to see the relationship between license data and stock market data.<a class="anchor-link" href="#In-order-to-see-a-more-recent-trend,-we-did-another-analysis-over-the-past-5-years-later-again,-to-see-the-relationship-between-license-data-and-stock-market-data.">&#182;</a></h4>
 </div>
@@ -19054,10 +19075,10 @@ dtype: object
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Five-years-high-stock-market-price-have-significant-relationship-with-license-application">Five years high stock market price have significant relationship with license application<a class="anchor-link" href="#Five-years-high-stock-market-price-have-significant-relationship-with-license-application">&#182;</a></h4><p>We see the p-value=0.008, and t-value=2.659, therefore we conlude there is significant relationship between Business license application and High stock price. As the stock market price goes up, the license application number goes up by 0.0016 high price. As this coefficient is very low, the relationship is not obvious when look at the chart</p>
+<h4 id="Fifteen-years-high-stock-market-price-have-significant-relationship-with-license-application">Fifteen years high stock market price have significant relationship with license application<a class="anchor-link" href="#Fifteen-years-high-stock-market-price-have-significant-relationship-with-license-application">&#182;</a></h4><p>We see the p-value=0.008, and t-value=2.659, therefore we conlude there is significant relationship between Business license application and High stock price. As the stock market price goes up, the license application number goes up by 0.0016 high price. As this coefficient is very low, the relationship is not obvious when look at the plot</p>
 <ul>
 <li>We also observed stock market high price have significant relationship with business license in the 5-year analysis.</li>
-<li>Therefore we conclude that in the 5-year data the stock market price have significant relationship with license application</li>
+<li>Therefore we conclude that in the 5-year data the stock market price also have significant relationship with license application</li>
 </ul>
 
 </div>
@@ -19155,7 +19176,7 @@ dtype: object
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Five-years-Low-stock-market-price-have-significant-relationship-with-license-application">Five years Low stock market price have significant relationship with license application<a class="anchor-link" href="#Five-years-Low-stock-market-price-have-significant-relationship-with-license-application">&#182;</a></h4><p>We see the p-value=0.008, and t-value=2.654, therefore we conlude there is relationship between Business license application and High stock price. As the stock market price goes up, the license application number goes up by 0.0016 low price. Becuase this coefficient is very low, the relationship is not obvious when look at the chart</p>
+<h4 id="Fifteen-years-Low-stock-market-price-have-significant-relationship-with-license-application">Fifteen years Low stock market price have significant relationship with license application<a class="anchor-link" href="#Fifteen-years-Low-stock-market-price-have-significant-relationship-with-license-application">&#182;</a></h4><p>We see the p-value=0.008, and t-value=2.654, therefore we conlude there is relationship between Business license application and High stock price. As the stock market price goes up, the license application number goes up by 0.0016 low price. Becuase this coefficient is very low, the relationship is not obvious when look at the chart</p>
 <ul>
 <li>We also observed stock market low price have significant relationship with business license in the 5-year analysis.</li>
 <li>Therefore we conclude that in the 5-year data the stock market price have significant relationship with license application</li>
@@ -22711,10 +22732,9 @@ height=216
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="We-run-regression-between-Unemployment-rate-and-both-the-Stock-Market-Price-and-the-number-of-license-application-to-see-the-relationship,-we-found-no-significant-relationships">We run regression between Unemployment rate and both the Stock Market Price and the number of license application to see the relationship, we found no significant relationships<a class="anchor-link" href="#We-run-regression-between-Unemployment-rate-and-both-the-Stock-Market-Price-and-the-number-of-license-application-to-see-the-relationship,-we-found-no-significant-relationships">&#182;</a></h4><ul>
-<li>while holding the number of license application and low price fixed, we see the p-value for the high price is 0.36, also we see the t-value is 0.92. So we conclude no significant relationship between unemployment rate and high stock market price, because of the large P-value and small t-value</li>
-<li>while holding the number of license application and high price fixed, we see the p-value for the low price is 0.285, also we see the t-value is -1.074. So we conclude no significant relationship between unemployment rate and low stock market price, because of the large P-value and small t-value</li>
-<li>while holding both high and low stock market price fixed, we see the p-value for the number of license application is 0.303, also we see the t-value is 1.035. So we conclude no significant relationship between unemployment rate and number of license application, because of the large P-value and small t-value</li>
+<h4 id="We-run-regression-on-all-three-datasets:-Unemployment-rate-&amp;-Stock-Market-Price-&amp;-number-of-license-application.-We-got-the-same-result-as-the-anlaysis-above.">We run regression on all three datasets: Unemployment rate &amp; Stock Market Price &amp; number of license application. We got the same result as the anlaysis above.<a class="anchor-link" href="#We-run-regression-on-all-three-datasets:-Unemployment-rate-&amp;-Stock-Market-Price-&amp;-number-of-license-application.-We-got-the-same-result-as-the-anlaysis-above.">&#182;</a></h4><h4 id="We-found-there-is-significant-relationship-between-unemployment-and-stock-market-price,-but-there-is-no-relationship-between-unemployment-and-license-application.">We found there is significant relationship between unemployment and stock market price, but there is no relationship between unemployment and license application.<a class="anchor-link" href="#We-found-there-is-significant-relationship-between-unemployment-and-stock-market-price,-but-there-is-no-relationship-between-unemployment-and-license-application.">&#182;</a></h4><ul>
+<li>while holding the number of license application fixed, we see the p-value for the high price is 0.000, also we see the t-value is -4.195. So we conclude there is significant negative relationship between unemployment rate and high stock market price, because of the small P-value and large t-value</li>
+<li>while holding high stock market price fixed, we see the p-value for the number of license application is 0.358, also we see the t-value is 0.922. So we conclude no significant relationship between unemployment rate and number of license application, because of the large P-value and small t-value</li>
 <li>We also observed the R-squared is a very small number, very little variable is explained by this regression model</li>
 </ul>
 
@@ -28321,6 +28341,22 @@ height=216
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">html</span> <span class="o">=</span> <span class="s2">&quot;https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr&quot;</span>
+<span class="n">license</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Business_Licenses.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;APPLICATION CREATED DATE&quot;</span><span class="p">,</span> <span class="s2">&quot;BUSINESS ACTIVITY&quot;</span><span class="p">,</span> <span class="s2">&quot;APPLICATION TYPE&quot;</span><span class="p">,</span> <span class="s2">&quot;ADDRESS&quot;</span><span class="p">],</span><span class="n">low_memory</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">license</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">license</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
